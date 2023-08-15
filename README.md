@@ -1,5 +1,8 @@
 # DevGPT: Studying Developer Conversations with ChatGPT
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.8242142.svg)](https://doi.org/10.5281/zenodo.8242142)
+
+[https://github.com/NAIST-SE/DevGPT/](https://github.com/NAIST-SE/DevGPT/)
 ## Data Extraction
 
 ### GitHub [GraphQL](https://docs.github.com/en/graphql) and [REST](https://docs.github.com/en/rest?apiVersion=2022-11-28):

@@ -2,7 +2,7 @@
 [https://github.com/NAIST-SE/DevGPT/](https://github.com/NAIST-SE/DevGPT/)
 
 ## Content
-Within this repository, we have included only the most recent snapshot of six JSON files sourced from GitHub and Hacker News. This limitation is due to the size constraints imposed by GitHub. For the complete dataset, please check the Zenodo link provided.
+In this repository, we've incorporated three snapshots, each containing six JSON files encompassing GitHub Issues, Pull Requests, Discussions, Commits, Code Files, and Hacker News threads. Additionally, you can access the comprehensive dataset through the Zenodo data repository:
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.8242142.svg)](https://doi.org/10.5281/zenodo.8242142)
 
 

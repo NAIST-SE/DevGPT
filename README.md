@@ -15,7 +15,7 @@ We performed a search function with the keyword `https://chat.openai.com/share/`
 ```
 https:\/\/chat\.openai\.com\/share\/[a-zA-Z0-9-]{36}
 ```
-For the GitHub REST API, we performed the same keyword and regular expression to obtain the references of shared ChatGPT links in commits and code files from GitHub. Moreover, we applied additional filters (e.g., creation time) in order to work around GitHub’s limit on the search function, since it only supports a maximum of thousand results per call.
+For the GitHub REST API, we performed the same keyword and regular expression to obtain the references of shared ChatGPT links in commits and code files from GitHub. Moreover, we applied additional filters (e.g., creation time) in order to work around GitHub’s limit on the search function, since it only supports a maximum of a thousand results per call. It's worth noting that the total count varies upon each API/[Webpage access](https://github.com/search?q=%22https%3A%2F%2Fchat.openai.com%2Fshare%2F%22&type=commits) in the GitHub, which leads to inconsistent results compared to the GitHub website.
 
 ### [HackerNews](https://hn.algolia.com/api): 
 Similar to the GitHub search function, HackerNews also provides an endpoint (`http://hn.algolia.com/api/v1/search?query=...`) to obtain references of shared ChatGPT links in posts from HackerNews. The same regular expression was applied to further identify whether mentioned links are shared ChatGPT links.

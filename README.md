@@ -1,8 +1,10 @@
 # DevGPT: Studying Developer-ChatGPT Conversations
 [https://github.com/NAIST-SE/DevGPT/](https://github.com/NAIST-SE/DevGPT/)
 
+![Example of a ChatGPT conversation from the dataset](example.pdf)
+
 ## Content
-In this repository, we've incorporated three snapshots, each containing six JSON files encompassing GitHub Issues, Pull Requests, Discussions, Commits, Code Files, and Hacker News threads. Additionally, you can access the same dataset through the Zenodo data repository:
+In this repository, we've incorporated six snapshots, each containing six JSON files encompassing GitHub Issues, Pull Requests, Discussions, Commits, Code Files, and Hacker News threads. Additionally, you can access the same dataset through the Zenodo data repository:
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.8248511.svg)](https://doi.org/10.5281/zenodo.8248511)
 
 
@@ -19,11 +21,10 @@ For the GitHub REST API, we performed the same keyword and regular expression to
 Similar to the GitHub search function, HackerNews also provides an endpoint (`http://hn.algolia.com/api/v1/search?query=...`) to obtain references of shared ChatGPT links in posts from HackerNews. The same regular expression was applied to further identify whether mentioned links are shared ChatGPT links.
 
 ### Shared ChatGPT conversations: 
-After obtaining shared ChatGPT links from different sources, we fetched the web page of the shared conversation from ChatGPT. Since users could delete or inactivate the shared conversations, we fetched all data once a week (three snapshots in total from July 27, 2023, August 3, 2023, and August
-10, 2023). If the response status is other than *200*, we obtain the data from the same shared link in all snapshots.
+After obtaining shared ChatGPT links from different sources, we fetched the web page of the shared conversation from ChatGPT. Since users could delete or inactivate the shared conversations, we fetched all data once a week (six snapshots in total from JJuly 27, 2023, August 3, 2023, August 10, 2023, August 17, 2023, August 24, 2023, and August 31, 2023). If the response status is other than *200*, we obtain the data from the same shared link in all snapshots.
 
 ## Data Set Structure
-GPTShare comprises three snapshots taken on July 27, 2023, August 3, 2023, and August 10, 2023. Each snapshot consists of six JSON files sourced differently. We name each JSON using a combination of its fetch time and source name. Additionally, we've provided a consolidated CSV file containing all ChatGPT links harvested from GitHub and Hacker News.
+GPTShare comprises six snapshots taken on July 27, 2023, August 3, 2023, August 10, 2023, August 17, 2023, August 24, 2023, and August 31, 2023. Each snapshot consists of six JSON files sourced differently. We name each JSON using a combination of its fetch time and source name. Additionally, we've provided a consolidated CSV file containing all ChatGPT links harvested from GitHub and Hacker News.
 ```
 📁 /
 ├─ 📄 %Y%m%d_%H%M%S_file_sharing.json

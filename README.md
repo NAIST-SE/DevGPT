@@ -24,7 +24,7 @@ Similar to the GitHub search function, HackerNews also provides an endpoint (`ht
 After obtaining shared ChatGPT links from different sources, we fetched the web page of the shared conversation from ChatGPT. Since users could delete or inactivate the shared conversations, we fetched all data once a week (six snapshots in total from July 27, 2023, August 3, 2023, August 10, 2023, August 17, 2023, August 24, 2023, and August 31, 2023). If the response status is other than *200*, we obtain the data from the same shared link in all snapshots.
 
 ## Data Set Structure
-GPTShare comprises six snapshots taken on July 27, 2023, August 3, 2023, August 10, 2023, August 17, 2023, August 24, 2023, and August 31, 2023. Each snapshot consists of six JSON files sourced differently. We name each JSON using a combination of its fetch time and source name. Additionally, we've provided a consolidated CSV file containing all ChatGPT links harvested from GitHub and Hacker News in the snapshot 20230831.
+GPTShare comprises six snapshots taken on July 27, 2023, August 3, 2023, August 10, 2023, August 17, 2023, August 24, 2023, and August 31, 2023. Each snapshot consists of six JSON files sourced differently. We name each JSON using a combination of its fetch time and source name. Additionally, we've provided a consolidated CSV file containing all ChatGPT links harvested from GitHub and Hacker News in each snapshot.
 ```
 📁 /
 ├─ 📄 %Y%m%d_%H%M%S_file_sharing.json
@@ -33,7 +33,7 @@ GPTShare comprises six snapshots taken on July 27, 2023, August 3, 2023, August 
 ├─ 📄 %Y%m%d_%H%M%S_issue_sharing.json
 ├─ 📄 %Y%m%d_%H%M%S_discussion_sharing.json
 ├─ 📄 %Y%m%d_%H%M%S_commit_sharing.json
-📄 ChatGPT_Link_Sharing.csv
+├─ 📄 ChatGPT_Link_Sharing.csv
 ```
 
 ## Data Structure

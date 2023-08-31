@@ -1,7 +1,7 @@
 # DevGPT: Studying Developer-ChatGPT Conversations
 [https://github.com/NAIST-SE/DevGPT/](https://github.com/NAIST-SE/DevGPT/)
 
-![Example of a ChatGPT conversation from the dataset](example.pdf)
+![Example of a ChatGPT conversation from the dataset](example.png)
 
 ## Content
 In this repository, we've incorporated six snapshots, each containing six JSON files encompassing GitHub Issues, Pull Requests, Discussions, Commits, Code Files, and Hacker News threads. Additionally, you can access the same dataset through the Zenodo data repository:

@@ -5,7 +5,7 @@
 
 ## Content
 In this repository, we've incorporated six snapshots, each containing six JSON files encompassing GitHub Issues, Pull Requests, Discussions, Commits, Code Files, and Hacker News threads. Additionally, you can access the same dataset through the Zenodo data repository:
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.8248511.svg)](https://doi.org/10.5281/zenodo.8248511)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.8303722.svg)](https://doi.org/10.5281/zenodo.8303722)
 
 
 ## Data Extraction
@@ -13,7 +13,7 @@ In this repository, we've incorporated six snapshots, each containing six JSON f
 ### GitHub [GraphQL](https://docs.github.com/en/graphql) and [REST](https://docs.github.com/en/rest?apiVersion=2022-11-28):
 We performed a search function with the keyword `https://chat.openai.com/share/` in the GitHub GraphQL API to identify mentions of shared links in issues, pull requests, and discussions from GitHub. Since this function did not support searching special characters (e.g., `/` and `:`), we then identified the exact mentions of shared ChatGPT links by the regular expression:
 ```
-https:\/\/chat\.openai\.com\/share\/[a-zA-Z0-9-]{36}</code></pre>
+https:\/\/chat\.openai\.com\/share\/[a-zA-Z0-9-]{36}
 ```
 For the GitHub REST API, we performed the same keyword and regular expression to obtain the references of shared ChatGPT links in commits and code files from GitHub. Moreover, we applied additional filters (e.g., creation time) in order to work around GitHub’s limit on the search function, since it only supports a maximum of thousand results per call.
 
@@ -21,10 +21,10 @@ For the GitHub REST API, we performed the same keyword and regular expression to
 Similar to the GitHub search function, HackerNews also provides an endpoint (`http://hn.algolia.com/api/v1/search?query=...`) to obtain references of shared ChatGPT links in posts from HackerNews. The same regular expression was applied to further identify whether mentioned links are shared ChatGPT links.
 
 ### Shared ChatGPT conversations: 
-After obtaining shared ChatGPT links from different sources, we fetched the web page of the shared conversation from ChatGPT. Since users could delete or inactivate the shared conversations, we fetched all data once a week (six snapshots in total from JJuly 27, 2023, August 3, 2023, August 10, 2023, August 17, 2023, August 24, 2023, and August 31, 2023). If the response status is other than *200*, we obtain the data from the same shared link in all snapshots.
+After obtaining shared ChatGPT links from different sources, we fetched the web page of the shared conversation from ChatGPT. Since users could delete or inactivate the shared conversations, we fetched all data once a week (six snapshots in total from July 27, 2023, August 3, 2023, August 10, 2023, August 17, 2023, August 24, 2023, and August 31, 2023). If the response status is other than *200*, we obtain the data from the same shared link in all snapshots.
 
 ## Data Set Structure
-GPTShare comprises six snapshots taken on July 27, 2023, August 3, 2023, August 10, 2023, August 17, 2023, August 24, 2023, and August 31, 2023. Each snapshot consists of six JSON files sourced differently. We name each JSON using a combination of its fetch time and source name. Additionally, we've provided a consolidated CSV file containing all ChatGPT links harvested from GitHub and Hacker News.
+GPTShare comprises six snapshots taken on July 27, 2023, August 3, 2023, August 10, 2023, August 17, 2023, August 24, 2023, and August 31, 2023. Each snapshot consists of six JSON files sourced differently. We name each JSON using a combination of its fetch time and source name. Additionally, we've provided a consolidated CSV file containing all ChatGPT links harvested from GitHub and Hacker News in the snapshot 20230831.
 ```
 📁 /
 ├─ 📄 %Y%m%d_%H%M%S_file_sharing.json
@@ -33,7 +33,7 @@ GPTShare comprises six snapshots taken on July 27, 2023, August 3, 2023, August 
 ├─ 📄 %Y%m%d_%H%M%S_issue_sharing.json
 ├─ 📄 %Y%m%d_%H%M%S_discussion_sharing.json
 ├─ 📄 %Y%m%d_%H%M%S_commit_sharing.json
-└─ 📄 ChatGPT_Link_Sharing.csv
+📄 ChatGPT_Link_Sharing.csv
 ```
 
 ## Data Structure

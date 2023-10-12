@@ -107,7 +107,7 @@ GPTShare comprises six snapshots taken on July 27, 2023, August 3, 2023, August 
 | Deletions | Number of lines deleted in this pull request |
 | ChangedFiles | Number of files changed in this pull request |
 | CommitsTotalCount | Number of commits included in this pull request |
-| CommitShas | A list of commit Shas that are included in this pull request |
+| CommitSha | A list of commit Shas that are included in this pull request |
 | ChatgptSharing    | List of ChatGPT link mentions. Refer to the `ChatgptSharing` structure for details  |
 
 ### Hacker News
